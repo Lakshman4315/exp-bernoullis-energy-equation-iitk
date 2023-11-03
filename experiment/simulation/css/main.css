@@ -429,3 +429,56 @@ input {
 /* @media screen and (max-width : 1330px){
     
 } */
+
+/* #zoom-group {
+    /* transform: scale(1); Initial scale */
+    /* transition:  1s ease-in-out; Transition for smooth zoom effect */
+  /* } */ 
+  
+  /* #zoom-group:hover {
+    transform: scale(2); /* Scale up on hover (adjust the scale factor as needed) */
+  /* } */ 
+  /* @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2); /* Adjust the scale factor as needed */
+    /* }
+  } */
+   
+  /* #zoom-group {
+    transform-origin: center;
+    
+  } */
+  
+  #zoom-group:hover {
+    transform-origin:  center;
+    transform-box: fill-box;
+    transition-duration: 1s;
+    transform: scale(1.5); 
+  }
+  
+
+/* #turbin.rotate {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(60deg);
+  }  */
+    
+    /* animation: rotate 5s linear infinite; */
+    
+
+/* 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+  
+  
+  
+  

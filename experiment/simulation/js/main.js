@@ -139,6 +139,8 @@ function waterFlow4(){
 
 
 function waterFlow5(){
+    w4.setAttribute("opacity","1")
+
     const animateElement = document.createElementNS("http://www.w3.org/2000/svg", "animate");
     animateElement.setAttribute("attributeName", "width");
     animateElement.setAttribute("from", "0");
@@ -450,7 +452,7 @@ function fillTankFront(h){
 
     setTimeout(function() {
 
-        document.getElementById("steps").innerHTML = "Take note of the current time and current height, and then readjust the gate valve value using the slider for additional measurements. Finally, use the provided data to calculate Qact, Qth, and Cd."
+        document.getElementById("steps").innerHTML = "Take note of the current time and current height, and then readjust the value of valve positioning to get further readings"
         valvePositioning.disabled=false;
         // purzeButton.disabled = false;
       }, 5000);
@@ -492,9 +494,9 @@ function waterTankSideFlow(y1,y2,h){
 }
 
 function purzeAction(){
+    purzeButton.disabled = true;
 
     shouldStop=true
-    purzeButton.disabled = true;
     w10.setAttribute("width","0")
     w11.setAttribute("height","0")
    
@@ -592,15 +594,20 @@ function resetTimer() {
 }
 
 function updateValvePositioning()  {
-    // stopAnimation()
     shouldStop=false
     displayArrows()
     reset()
     resetTimer()
     var selectedValue = valvePositioning.value;
     valvePositioningText.textContent = selectedValue;
-    waterFlow5() 
-    valvePositioning.disabled = true;
+
+    if(selectedValue == 0){
+        document.getElementById("steps").innerHTML = "Select the value of Valve Positioning greater than 0!"
+        w4.setAttribute("opacity","0")
+    }else{
+        waterFlow5() 
+        valvePositioning.disabled = true;
+    }
 }
 
 function reset(){

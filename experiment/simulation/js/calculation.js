@@ -47,17 +47,17 @@ var t46=document.getElementById("t46");
 
 function calculate(){
 
-    if(t1.querySelector("input").value=="" || t2.querySelector("input").value=="" || t3.querySelector("input").value=="" || t4.querySelector("input").value=="" || t5.querySelector("input").value=="" || t6.querySelector("input").value=="" || t7.querySelector("input").value=="" || t8.querySelector("input").value=="" || t9.querySelector("input").value=="" || t10.querySelector("input").value=="" || t11.querySelector("input").value=="" || t12.querySelector("input").value==""  || t13.querySelector("input").value=="" ||t14.querySelector("input").value=="" ||t15.querySelector("input").value=="" ||t16.querySelector("input").value=="" ||t17.querySelector("input").value=="" ||t18.querySelector("input").value=="" ||t19.querySelector("input").value=="" ||t20.querySelector("input").value=="" ||t21.querySelector("input").value=="" ||t22.querySelector("input").value=="" ||t23.querySelector("input").value=="" ||t24.querySelector("input").value=="" ||t25.querySelector("input").value=="" ||t26.querySelector("input").value=="" ||t27.querySelector("input").value=="" ||t28.querySelector("input").value=="" ||t29.querySelector("input").value=="" ||t30.querySelector("input").value=="" ||t31.querySelector("input").value=="" ||t32.querySelector("input").value=="" ||t33.querySelector("input").value=="" ||t34.querySelector("input").value=="" ||t35.querySelector("input").value=="" ||t36.querySelector("input").value=="" ||t37.querySelector("input").value=="" ||t38.querySelector("input").value=="" ||t39.querySelector("input").value=="" ||t40.querySelector("input").value=="" ||t41.querySelector("input").value=="" ||t42.querySelector("input").value=="" ||t43.querySelector("input").value=="" ||t44.querySelector("input").value=="" ||t45.querySelector("input").value=="" ||t46.querySelector("input").value==""){
+    if(t1.querySelector("input").value=="" || t2.querySelector("input").value=="" || t3.querySelector("input").value=="" || t4.querySelector("input").value=="" || t5.querySelector("input").value=="" || t6.querySelector("input").value=="" || t7.querySelector("input").value=="" || t8.querySelector("input").value=="" || t9.querySelector("input").value=="" || t10.querySelector("input").value=="" || t11.querySelector("input").value=="" || t12.querySelector("input").value==""  || t13.querySelector("input").value=="" ||t14.querySelector("input").value=="" ||t15.querySelector("input").value=="" ||t16.querySelector("input").value=="" ||t17.querySelector("input").value=="" ||t18.querySelector("input").value=="" ||t26.querySelector("input").value=="" ||t27.querySelector("input").value=="" ||t28.querySelector("input").value=="" ||t29.querySelector("input").value=="" ||t30.querySelector("input").value=="" ||t31.querySelector("input").value=="" ||t32.querySelector("input").value=="" ||t33.querySelector("input").value=="" ||t34.querySelector("input").value=="" ||t35.querySelector("input").value=="" ||t36.querySelector("input").value=="" ||t37.querySelector("input").value=="" ||t38.querySelector("input").value=="" ||t39.querySelector("input").value=="" ){
         alert("Please Fill all input fields or Enter valid values in all input fields.");
     }else{
-        // cd1.querySelector("input").value = (qact1.querySelector("input").value/qt1.querySelector("input").value).toFixed(4)
+        t40.querySelector("input").value =   (parseFloat(t26.querySelector("input").value) + parseFloat(t33.querySelector("input").value)).toFixed(4)
+        t41.querySelector("input").value =  (parseFloat(t27.querySelector("input").value) + parseFloat(t34.querySelector("input").value)).toFixed(4)
+        t42.querySelector("input").value = (parseFloat(t28.querySelector("input").value) + parseFloat(t35.querySelector("input").value)).toFixed(4)
+        t43.querySelector("input").value = (parseFloat(t29.querySelector("input").value)+ parseFloat(t36.querySelector("input").value)).toFixed(4)
+        t44.querySelector("input").value =  (parseFloat(t30.querySelector("input").value)+ parseFloat(t37.querySelector("input").value)).toFixed(4)
+        t45.querySelector("input").value = (parseFloat(t31.querySelector("input").value)+ parseFloat(t38.querySelector("input").value)).toFixed(4)
+        t46.querySelector("input").value = ( parseFloat(t32.querySelector("input").value)+ parseFloat(t39.querySelector("input").value)).toFixed(4)
 
-        // cd2.querySelector("input").value = (qact2.querySelector("input").value/qt2.querySelector("input").value).toFixed(4)
-    
-        // cd3.querySelector("input").value = (qact3.querySelector("input").value/qt3.querySelector("input").value).toFixed(4)
-    
-        // cdAvg.querySelector("input").value = (((qact1.querySelector("input").value/qt1.querySelector("input").value) + (qact2.querySelector("input").value/qt2.querySelector("input").value) + (qact3.querySelector("input").value/qt3.querySelector("input").value)) / 3).toFixed(4)
-    
         document.querySelector("#check-button").disabled = false
     }
 
@@ -218,18 +218,23 @@ if(t46.querySelector("input").value >0.183546  && t46.querySelector("input").val
 }else{
     t46.querySelector("input").style.color = "red"
     flag= false
-}}
-
-
+}
 
 if(flag){
         
     for (let i = 0; i < 5; i++) {
-        // document.querySelector(".result-table").style.display = "none"
+        document.querySelector(".result-table").style.display = "none"
         confetti();
       }
-    
+      
     alert("Congratulations! You have successfully completed the experiment.");
 }else{
+    alert("Try Again");
     document.querySelector(".result-table").style.display = "flex"
 }
+
+}
+
+
+
+
