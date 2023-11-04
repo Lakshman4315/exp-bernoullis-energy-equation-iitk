@@ -6,7 +6,8 @@ var svg=document.getElementById("Layer_1");
 var valvePositioningText = document.getElementById("valve-positioning-text");
 var manometerText = document.getElementById("manometer-text")
 var count=0
-
+window.appData = window.appData || {};
+window.appData.powerFlag = false;
 var w2 = document.getElementById("Water_3")
 var w3 = document.getElementById("Water_4")
 var w4 = document.getElementById("Water_5")
@@ -72,10 +73,12 @@ function power(){
 
         waterFlow3()
     }else{
-        enableButton.style.backgroundColor = "#ca2222"
-        document.getElementById("steps").innerHTML = "Step1: Turn Power On"
-        enableButton.textContent = "POWER ON"
-        count = 0
+        if(!window.appData.powerFlag){
+            alert("Please complete the experiment to turn power off!");
+            count=1
+        }else{
+            location.reload()
+        }
     }
 }
 

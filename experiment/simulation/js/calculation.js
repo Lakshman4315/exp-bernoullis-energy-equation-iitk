@@ -225,6 +225,8 @@ if(flag){
     for (let i = 0; i < 5; i++) {
         document.querySelector(".result-table").style.display = "none"
         confetti();
+        window.appData = window.appData || {};
+        window.appData.powerFlag=true
       }
       
     alert("Congratulations! You have successfully completed the experiment.");
