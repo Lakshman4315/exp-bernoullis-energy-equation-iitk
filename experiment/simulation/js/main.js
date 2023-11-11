@@ -375,7 +375,7 @@ function waterFlow9(){
     setTimeout(function() {
         waterTankBase.setAttribute("opacity","1")
         waterFlow10()
-      }, 1500);
+      }, 2000);
 }
 
 function waterFlow10(){
@@ -422,7 +422,7 @@ function waterFlow11(){
                 h1Text.textContent = "21.6"
                 h2Text.textContent = "21.0"
                 h3Text.textContent = "18.2"
-                h4Text.textContent = "10.8"
+                h4Text.textContent = "10.1"
                 h5Text.textContent = "12.8"
                 h6Text.textContent = "17.2"
                 h7Text.textContent = "17.9"
@@ -443,7 +443,7 @@ function fillTankFront(h){
     animateElement.setAttribute("attributeName", "height");
     animateElement.setAttribute("from", "0");
     animateElement.setAttribute("to", h);
-    animateElement.setAttribute("dur","5s")
+    animateElement.setAttribute("dur","4s")
 
     animateElement.setAttribute("begin", "0s");
     animateElement.setAttribute("fill","freeze");
@@ -457,8 +457,11 @@ function fillTankFront(h){
 
         document.getElementById("steps").innerHTML = "Take note of the current time and current height, and then readjust the value of valve positioning to get further readings"
         valvePositioning.disabled=false;
+        if(valvePositioning.value==2){
+            document.getElementById("steps").innerHTML = "Take note of the current time on the timer."
+        }
         // purzeButton.disabled = false;
-      }, 5000);
+      }, 4000);
 
 }   
 
@@ -514,7 +517,7 @@ function purzeAction(){
         arrowMovement2(615.7,621.7,627.7, 505.7 )
     }
     if(valvePositioning.value==2){
-        timer(52,"05")
+        timer(52,"50")
         fillTankFront(105)
         waterTankBackFlow(551.2,446.2)
         waterTankSideFlow(620.6,550,515.6)
