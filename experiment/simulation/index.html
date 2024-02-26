@@ -1009,7 +1009,7 @@
 
 								</div>
 
-								<table id="tab1" border="1">
+								<table id="tab1" class="givenTable" border="1">
 									<tr>
 										<th colspan="7" style="font-size: 25px; font-weight: bolder; background-color: #634380;color: white;">Given Table</th>
 									</tr>
@@ -1065,7 +1065,7 @@
 										</tr>
 								</table>
 
-								<table id="tab1" border="1">
+								<table id="tab1" class="observationTable" border="1">
 									<tr>
 										<th colspan="10" style="font-size: 25px; font-weight: bolder; background-color: #634380;color: white;">Observation Table</th>
 									</tr>
@@ -1115,7 +1115,7 @@
 							   </tr>
 								</table>
 
-								<table id="tab1" border="1">
+								<table id="tab1" class="calculationTable" border="1">
 									<tr>
 										<th colspan="8" style="font-size: 25px; font-weight: bolder; background-color: #634380;color: white;">Calculation Table</th>
 									</tr>
@@ -1270,6 +1270,7 @@
 								<button id="check-button" type="button" class="checkYourResult" style="border: solid black 3px; border-radius: 5px; padding: 5px;" disabled="true" onclick="checkYourResult()" >Check Your Result</button>
 
 								<div  style="margin:auto; display: flex; gap: 40px ;">
+									<button style=" margin-bottom: 40px; border: solid black 3px; border-radius: 5px; padding: 5px; " onclick="exportToExcel()">Export to Excel</button>
 									<button style=" margin-bottom: 40px; border: solid black 3px; border-radius: 5px; padding: 5px; " onclick="window.print()">Print this page</button>
 									
 								</div>
@@ -1290,7 +1291,7 @@
 
 				<!-- Add JS at the bottom of HTML file --> 
 				<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-				<script src="https://apis.google.com/js/api.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
 					<script src="./js/main.js"></script>
 					<script src="./js/calculation.js"></script>
 			</body>
